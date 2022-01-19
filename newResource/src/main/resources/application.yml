@@ -6,7 +6,7 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/db?serverTimezone=UTC
     username: root
-    password: gaohu
+    password: admin
   jpa:
     database: MySQL
     show-sql: true
