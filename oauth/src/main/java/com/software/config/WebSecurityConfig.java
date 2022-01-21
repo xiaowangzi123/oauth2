@@ -12,9 +12,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
- * Created with IntelliJ IDEA.
- *
- * @author Demo_Null
  * @date 2020/10/26
  * @description Security 配置文件
  */
@@ -31,6 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     //指定认证对象的来源
+    @Override
     public void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(UserServiceImpl).passwordEncoder(passwordEncoder());
     }

@@ -23,9 +23,6 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 import javax.sql.DataSource;
 
 /**
- * Created with IntelliJ IDEA.
- *
- * @author Demo_Null
  * @date 2020/10/26
  * @description OAuth2 配置文件
  */
@@ -106,7 +103,10 @@ public class OAuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
     }
 
-    // OAuth2 的主配置信息
+    /**
+     * OAuth2 的主配置信息
+     * 用来配置令牌(token)的访问端点和令牌服务(token services)。
+     */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
         endpoints

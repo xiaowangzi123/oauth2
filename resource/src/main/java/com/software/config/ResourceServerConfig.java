@@ -55,7 +55,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                     // 允许跨域
                     response.addHeader("Access-Control-Allow-Origin", "*");
                     // 如果是跨域的预检请求，则原封不动向下传达请求头信息
-                    if (request.getMethod().equals("OPTIONS")) {
+                    if ("OPTIONS".equals(request.getMethod())) {
                         response.setHeader("Access-Control-Allow-Methods", request.getHeader("Access-Control-Request-Method"));
                         response.setHeader("Access-Control-Allow-Headers", request.getHeader("Access-Control-Request-Headers"));
                     }

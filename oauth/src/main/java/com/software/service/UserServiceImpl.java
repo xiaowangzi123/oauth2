@@ -36,6 +36,7 @@ public class UserServiceImpl implements UserDetailsService {
         grantedAuths.add(sysRole);
 
 
+        //这里可以设置查询数据库
 
         return new User("admin",passwordEncoder.encode("123456"), grantedAuths);
     }
